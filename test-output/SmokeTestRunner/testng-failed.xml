@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeTestRunner]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test name="Test(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="SmokeTesting"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.gmail.testScripts.Test_LoginPage">
+        <methods>
+          <include name="userEntersInvalidUserName"/>
+          <include name="userEntersCorrectCredentials"/>
+          <include name="userEntersValidUserNameButInvalidPassword"/>
+        </methods>
+      </class> <!-- com.gmail.testScripts.Test_LoginPage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [SmokeTestRunner] -->
